@@ -20,7 +20,7 @@ const Sidebar = () => {
   return (
     <div className="bg-zinc-900 w-90 h-screen flex flex-col">
       <div className="flex gap-4 items-center bg-blue-800">
-        <img className="w-16 h-18 p-2" src="https://smkn1sumbawa.sch.id/wp-content/uploads/2022/08/Logo-SMKN-1.png" />
+        <img className="w-16 h-16 p-2" src="https://smkn1sumbawa.sch.id/wp-content/uploads/2022/08/Logo-SMKN-1.png" />
         <span className="text-white text-lg">Perpustakaan SMKANSA</span>
       </div>
       <div className="flex flex-col gap-7 p-5 bg-zinc-800 flex-1">
