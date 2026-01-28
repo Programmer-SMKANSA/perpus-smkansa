@@ -84,3 +84,5 @@ CREATE TABLE public.pengunjung (
 );
 ```
 ---
+
+note : wajib buat akun admin untuk login ke dashboard, pergi ke db lalu bagian authentication add user lalu masukan email dan password
