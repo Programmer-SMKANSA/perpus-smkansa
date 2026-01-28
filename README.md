@@ -1,8 +1,11 @@
 ## 📚 Perpus-Smkansa
 
-**Perpus-Smkansa** adalah aplikasi manajemen perpustakaan berbasis desktop (Neutralinojs) dan web yang dirancang untuk mendigitalisasi proses administrasi di perpustakaan SMKN 1 Sumbawa. 
+**Perpus-Smkansa** adalah aplikasi manajemen perpustakaan berbasis desktop (Neutralinojs) dan web yang dirancang untuk memudahkan proses administrasi di perpustakaan SMKN 1 Sumbawa. 
 
 Aplikasi ini memudahkan petugas dalam mengelola data buku dan mencatat pengunjung
+
+### Preview
+<img src=""/>
 
 ### Fitur Utama
 * **Manajemen Buku:** Input, edit, dan hapus koleksi buku dengan mudah.
@@ -21,7 +24,7 @@ Aplikasi ini memudahkan petugas dalam mengelola data buku dan mencatat pengunjun
 ### Cara Menjalankan Project
 1.  **Clone repository ini:**
     ```bash
-    git clone [https://github.com/username/perpus-smkansa.git](https://github.com/username/perpus-smkansa.git)
+    git clone https://github.com/Programmer-SMKANSA/perpus-smkansa.git
     ```
 2.  **Install dependencies:**
     ```bash
