@@ -5,7 +5,16 @@
 Aplikasi ini memudahkan petugas dalam mengelola data buku dan mencatat pengunjung
 
 ### Preview
-<img src=""/>
+<table border="0">
+  <tr>
+    <td><img src="screenshot-2026-01-28_11-56-22.png" alt="Preview 1" width="100%"></td>
+    <td><img src="screenshot-2026-01-28_11-56-43.png" alt="Preview 2" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="screenshot-2026-01-28_11-57-05.png" alt="Preview 3" width="100%"></td>
+    <td><img src="screenshot-2026-01-28_11-56-22.png" alt="Preview 4" width="100%"></td>
+  </tr>
+</table>
 
 ### Fitur Utama
 * **Manajemen Buku:** Input, edit, dan hapus koleksi buku dengan mudah.
