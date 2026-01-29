@@ -152,26 +152,26 @@ const Peminjam = () => {
                     </svg>
                   </button>
                 </div>
-                <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4">
+                <form onSubmit={handleSubmit} className="mt-4 w-90 flex flex-col gap-4">
                   <div className="flex flex-col gap-1">
                     <label className="text-sm font-semibold">Nama Peminjam</label>
-                    <input value={nama} onChange={(e) => setNama(e.target.value)} required className="p-2 border rounded-md outline-blue-500" />
+                    <input value={nama} onChange={(e) => setNama(e.target.value)} required className="p-2 border-2 border-zinc-200 rounded-md outline-blue-500" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <label className="text-sm font-semibold">Judul Buku</label>
-                    <input value={judulBuku} onChange={(e) => setJudulBuku(e.target.value)} required className="p-2 border rounded-md outline-blue-500" />
+                    <input value={judulBuku} onChange={(e) => setJudulBuku(e.target.value)} required className="p-2 border-2 border-zinc-200 rounded-md outline-blue-500" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <label className="text-sm font-semibold">Kelas</label>
-                    <input value={kelas} onChange={(e) => setKelas(e.target.value)} required className="p-2 border rounded-md outline-blue-500" />
+                    <input value={kelas} onChange={(e) => setKelas(e.target.value)} required className="p-2 border-2 border-zinc-200 rounded-md outline-blue-500" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <label className="text-sm font-semibold">Jadwal Pengembalian</label>
-                    <input value={jadwal} onChange={(e) => setJadwal(e.target.value)} type="date" required className="p-2 border rounded-md outline-blue-500" />
+                    <input value={jadwal} onChange={(e) => setJadwal(e.target.value)} type="date" required className="p-2 border-2 border-zinc-200 rounded-md outline-blue-500" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <label className="text-sm font-semibold">Status</label>
-                    <select value={status} onChange={(e) => setStatus(e.target.value)} className="p-2 border rounded-md outline-blue-500 bg-white">
+                    <select value={status} onChange={(e) => setStatus(e.target.value)} className="p-2 border-2 border-zinc-200 rounded-md outline-blue-500 bg-white">
                       <option value="Dipinjam">Dipinjam</option>
                       <option value="Dikembalikan">Dikembalikan</option>
                     </select>

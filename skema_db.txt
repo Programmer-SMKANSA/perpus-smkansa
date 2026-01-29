@@ -1,0 +1,34 @@
+-- WARNING: This schema is for context only and is not meant to be run.
+-- Table order and constraints may not be valid for execution.
+
+CREATE TABLE public.buku (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  judul_buku text,
+  penulis text,
+  tahun_buku text,
+  user_id uuid DEFAULT gen_random_uuid() UNIQUE,
+  cover_url text,
+  CONSTRAINT buku_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.peminjam (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  nama text,
+  kelas text,
+  judul_buku text,
+  jadwal_pengembalian date,
+  user_id uuid UNIQUE,
+  status text DEFAULT ''::text,
+  CONSTRAINT peminjam_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.pengunjung (
+  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  nama text,
+  keperluan text,
+  tanggal_kunjungan date,
+  user_id uuid DEFAULT gen_random_uuid() UNIQUE,
+  kelas text,
+  CONSTRAINT pengunjung_pkey PRIMARY KEY (id)
+);
