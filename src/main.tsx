@@ -9,16 +9,17 @@ import Buku from './pages/buku.tsx'
 import Peminjam from './pages/peminjam.tsx'
 import Pengunjung from './pages/pengunjung.tsx'
 import Laporan from './pages/laporan.tsx'
+import Error from './error.tsx'
 
 const Router = createBrowserRouter([
+  {
+    path: "*",
+    Component: Error
+  },
   {
     path: "/",
     Component: Login
     },
-  {
-    path: "dashboard",
-    Component: App
-  },
   {
     path: "buku",
     Component: Buku
