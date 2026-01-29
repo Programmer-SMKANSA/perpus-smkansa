@@ -36,6 +36,23 @@ const App = () => {
     getSession()
 
   }, [navigate])
+  
+  const formatRelativeTime = (dateString) => {
+      const date = new Date(dateString);
+      const now = new Date();
+      
+      const diffTime = new Date(now.toDateString()) - new Date(date.toDateString());
+      const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+  
+      if (diffDays === 0) {
+        return `Hari ini, ${dateString.slice(11, 16)}`;
+      } else if (diffDays === 1) {
+        return `Kemarin, ${dateString.slice(11, 16)}`;
+      } else {
+        return `${diffDays} hari yang lalu`;
+      }
+    }
+  
 
   return (
     <div className="flex bg-zinc-50 min-h-screen overflow-hidden">
@@ -99,7 +116,7 @@ const App = () => {
                       <h1 className="text-zinc-600 font-medium text-sm">
                         {item.nama} {isReturned ? "telah mengembalikan" : "meminjam"} buku <span className="text-blue-500 underline">{item.judul_buku}</span>
                       </h1>
-                      <span className="text-xs text-zinc-500">{item.created_at.slice(11, 16)}</span>
+                      <span className="text-xs text-zinc-500">{formatRelativeTime(item.created_at)}</span>
                     </div>
                     <div className={`p-1.5 rounded-md text-xs w-fit ${isReturned ? "bg-emerald-500/20" : "bg-blue-500/20"}`}>
                       <span className={isReturned ? "text-emerald-600" : "text-blue-600"}>{item.status}</span>
