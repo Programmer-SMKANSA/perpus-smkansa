@@ -16,6 +16,9 @@ Aplikasi ini memudahkan petugas dalam mengelola data buku dan mencatat pengunjun
   </tr>
 </table>
 
+### Demo
+<a> href="https://perpus-smkansa.vercel.app/">Demo</a>
+
 ### Fitur Utama
 * **Manajemen Buku:** Input, edit, dan hapus koleksi buku dengan mudah.
 * **Absensi Pengunjung:** Pencatatan otomatis siswa yang berkunjung ke perpustakaan.
