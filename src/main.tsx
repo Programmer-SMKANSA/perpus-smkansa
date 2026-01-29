@@ -19,6 +19,10 @@ const Router = createBrowserRouter([
   {
     path: "/",
     Component: Login
+  },
+  {
+    path: "dashboard",
+    Component: App
     },
   {
     path: "buku",
