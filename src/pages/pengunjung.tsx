@@ -48,6 +48,22 @@ const Pengunjung = () => {
     setIdToDelete(null);
   };
 
+  const formatRelativeTime = (dateString) => {
+      const date = new Date(dateString);
+      const now = new Date();
+      
+      const diffTime = new Date(now.toDateString()) - new Date(date.toDateString());
+      const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+  
+      if (diffDays === 0) {
+        return `Hari ini, ${dateString.slice(11, 16)}`;
+      } else if (diffDays === 1) {
+        return `Kemarin, ${dateString.slice(11, 16)}`;
+      } else {
+        return `${diffDays} hari yang lalu`;
+      }
+    }
+  
   const handleEdit = (item) => {
     setIsEdit(true);
     setCurrentId(item.id);
@@ -194,7 +210,7 @@ const Pengunjung = () => {
                       <h1 className="text-zinc-800 font-bold text-sm">{item.nama}</h1>
                       <span className="text-xs text-zinc-500">Kelas: {item.kelas}</span>
                       <span className="text-xs text-zinc-500">Keperluan: {item.keperluan}</span>
-                      <span className="text-xs font-medium text-zinc-400 italic">{item.tanggal_kunjungan}</span>
+                      <span className="text-xs font-medium text-zinc-400">{formatRelativeTime(item.created_at)}</span>
                     </div>
                   </div>
                   <div className="flex gap-2">
