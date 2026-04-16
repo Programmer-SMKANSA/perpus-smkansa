@@ -52,40 +52,6 @@ Aplikasi ini memudahkan petugas dalam mengelola data buku dan mencatat pengunjun
     ```
 
 ### Setup Database
-Untuk menduplikasi struktur database, salin kode SQL yang ada di bawah ini dan tempelkan pada **SQL Editor* di dashboard Supabase Anda.
-```sql
-CREATE TABLE public.buku (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  judul_buku text,
-  penulis text,
-  tahun_buku text,
-  user_id uuid DEFAULT gen_random_uuid() UNIQUE,
-  cover_url text,
-  CONSTRAINT buku_pkey PRIMARY KEY (id)
-);
-CREATE TABLE public.peminjam (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  nama text,
-  kelas text,
-  judul_buku text,
-  jadwal_pengembalian date,
-  user_id uuid UNIQUE,
-  status text DEFAULT ''::text,
-  CONSTRAINT peminjam_pkey PRIMARY KEY (id)
-);
-CREATE TABLE public.pengunjung (
-  id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  nama text,
-  keperluan text,
-  tanggal_kunjungan date,
-  user_id uuid DEFAULT gen_random_uuid() UNIQUE,
-  kelas text,
-  CONSTRAINT pengunjung_pkey PRIMARY KEY (id)
-);
-```
----
-
+<a href="https://github.com/Programmer-SMKANSA/perpus-smkansa/blob/main/skema_db.txt">Klik disini!</a>
+<br/>
 note : wajib buat akun admin untuk login ke dashboard, pergi ke db lalu bagian authentication add user lalu masukan email dan password
